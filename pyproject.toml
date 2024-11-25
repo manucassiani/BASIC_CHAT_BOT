@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "pi-bot"
+version = "0.1.0"
+description = "virtual assistant for pi consultant challenge"
+authors = ["mcassiani <manuelcassiani0@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.7"
+llama-index-core = "^0.12.1"
+llama-index-vector-stores-faiss = "^0.3.0"
+fastapi = "^0.115.5"
+llama-index-llms-azure-openai = "^0.3.0"
+llama-index-embeddings-azure-openai = "^0.3.0"
+python-dotenv = "^1.0.1"
+uvicorn = "^0.32.1"
+faiss-cpu = "^1.9.0.post1"
+llama-index-readers-s3 = "^0.4.0"
+docx2txt = "^0.8"
+loguru = "^0.7.2"
+llama-index-embeddings-openai = "^0.3.0"
+llama-index-llms-openai = "^0.3.1"
+llama-index-llms-cohere = "^0.4.0"
+llama-index-embeddings-cohere = "^0.4.0"
+chromadb = "^0.5.20"
+llama-index-vector-stores-chroma = "^0.4.0"
+llama-index-program-openai = "^0.3.0"
+pre-commit = "^4.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

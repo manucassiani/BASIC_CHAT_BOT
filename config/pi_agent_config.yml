@@ -1,0 +1,51 @@
+service_context:
+    llm:
+        azure_open_ai:
+            model: 'gpt-4o'
+            temperature: 0
+        open_ai:
+            model: 'gpt-4o'
+            temperature: 0
+        cohere:
+            model: "command-r-plus"
+            temperature: 0
+    embedding:
+        azure_open_ai:
+            model: 'text-embedding-3-large'
+        open_ai:
+            model: 'text-embedding-3-large'
+        cohere:
+            model: "embed-english-v3.0"
+    chunk_size: 300
+    chunk_overlap: 20
+
+query_engine:
+    temperature: 0
+    similarity_top_k: 5
+    qa_template: "Your name is PiNova, the virtual assistant of PI Consulting.\n
+    Context information is below.\n
+    ---------------------\n
+    {context_str}\n
+    ---------------------\n
+    Given the information only from the context and without using prior knowledge, please follow these guidelines:\n
+    - Respond in only one sentence.\n
+    - Include emojis in the sentence to summarize the content.\n
+    - Always respond in the third person.\n
+    Query: {query_str}.\n
+    Answer:
+    "
+
+llm_simple_program:
+    detect_language_prompt: "Your task is to identify the language of the user's message. Analyze the user input and return the name of the detected language in English (e.g., 'Spanish', 'English', 'French'). If the language cannot be determined, return 'Spanish'.
+    User message: {user_input}
+    Detected language:
+    "
+
+    check_and_translate_to_specific_language: "Your task is to ensure that the model's response is written in the specified language.\n
+    - Compare the provided 'model_response' with the 'language' input.\n
+    - If the 'model_response' is already in the specified 'language', return it as is.\n
+    - If the 'model_response' is not in the specified 'language', translate it to that language.\n
+    Model's response: {model_response}
+    Language: {language}
+    output:
+    "
