@@ -17,15 +17,6 @@ The microservice includes the following endpoints, defined in `pi_agent_core/rou
 - **Docker**: Facilitates deployment and portability of the microservice.
 
 ---
-## Core Technologies
-The microservice utilizes a modern and efficient technology stack:
-- **Python**: Primary language for service development.
-- **FastAPI**: Framework used to create a fast, robust, and documented API.
-- **Llama-Index**: Tool used for generating and querying the vector index.
-- **ChromaDB**: Database specialized in storing and retrieving vector data.
-- **Docker**: Facilitates deployment and portability of the microservice.
-
----
 ## Microservice Structure
 The microservice design follows an **Onion Architecture**. This approach was chosen to ensure clear separation of concerns, improve maintainability, and facilitate scalability.
 
