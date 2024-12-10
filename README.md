@@ -1,6 +1,6 @@
-# PI_BOT
+# BASIC_CHAT_BOT
 
-**PI_BOT** is an API providing a virtual assistant capable of responding to queries made against a specific set of documents stored in the `/knowledge_base` folder.
+**BASIC_CHAT_BOT** is an API providing a virtual assistant capable of responding to queries made against a specific set of documents stored in the `/knowledge_base` folder.
 
 ## Main Endpoints
 The microservice includes the following endpoints, defined in `pi_agent_core/routers/agent.py`:
